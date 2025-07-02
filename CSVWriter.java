@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CSVWriter {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); // <- warning karena belum ditutup
+        Scanner scanner = new Scanner(System.in);
         String fileName = "students.csv";
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))) {
@@ -26,7 +26,7 @@ public class CSVWriter {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            scanner.close(); // <-- tambahkan ini untuk menutup Scanner
+            scanner.close();
         }
     }
 }
